@@ -1,9 +1,4 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local sound = Instance.new("Sound")
-sound.Parent = game.Workspace
-sound.PlaybackSpeed = 0.5
-sound.Volume = 10
-sound.SoundId = "rbxassetid://18689108730"
 
 
 local Window = Rayfield:CreateWindow({
@@ -36,8 +31,14 @@ local Tab = Window:CreateTab("Stash", 4483362458) -- Title, Image
 
 
 local Button = Tab:CreateButton({
-	Name = "Button Example",
+	Name = "Kill All Loop",
 	Callback = function()
+		local sound = Instance.new("Sound")
+		sound.Parent = game.Workspace
+		sound.PlaybackSpeed = 0.5
+		sound.Volume = 10
+		sound.SoundId = "rbxassetid://18689108730"
+		task.wait(3)
 		sound:Play()
 	end,
 })
